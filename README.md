@@ -7,18 +7,34 @@
 </p>
 
 ## Route exemple
-
+<p>
 Web_request::get("/user","UserController","show");
+</p>
+<p>
 Web_request::post("/user","UserController","register");
+  </p>
+<p>
 Web_request::put("/user","UserController","edit");
+  </p>
+<p>
 Web_request::delete("/user","UserController","delete");
-
+</p>
+<p>
 ## Route security exemple
 
+<p>
 Web_request::get("/user","UserController","show")->autentication();
+  </p>
+<p>
 Web_request::post("/user","UserController","register")->permitAll();
+  </p>
+<p>
 Web_request::put("/user","UserController","edit")->autentication();
+  </p>
+<p>
 Web_request::delete("/user","UserController","delete")->autentication();
+</p>
+
 
 ## Route  REST API exemple
 
