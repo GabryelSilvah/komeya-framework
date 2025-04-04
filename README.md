@@ -12,10 +12,10 @@ Web_request::get("/user","UserController","show");
 </p>
 <p>
 Web_request::post("/user","UserController","register");
-  </p>
+</p>
 <p>
 Web_request::put("/user","UserController","edit");
-  </p>
+</p>
 <p>
 Web_request::delete("/user","UserController","delete");
 </p>
@@ -24,14 +24,13 @@ Web_request::delete("/user","UserController","delete");
 ## Route security exemple
 
 <p>
-Web_request::get("/user","UserController","show")->autentication();
-  </p>
+Web_request::get("/user","UserController","show")->autentication();</p>
 <p>
 Web_request::post("/user","UserController","register")->permitAll();
-  </p>
+</p>
 <p>
 Web_request::put("/user","UserController","edit")->autentication();
-  </p>
+</p>
 <p>
 Web_request::delete("/user","UserController","delete")->autentication();
 </p>
@@ -39,7 +38,15 @@ Web_request::delete("/user","UserController","delete")->autentication();
 
 ## Route  REST API exemple
 
+<p>
 Web_request::get("/user","UserController","show")->restApi()->autentication();
+</p>
+<p>
 Web_request::post("/user","UserController","register")->restApi()->permitAll();
+</p>
+<p>
 Web_request::put("/user","UserController","edit")->restApi()->autentication();
+</p>
+<p>
 Web_request::delete("/user","UserController","delete")->restApi()->autentication();
+</p>
