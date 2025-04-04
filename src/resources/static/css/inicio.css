@@ -1,0 +1,113 @@
+#titulo_principal {
+    position: absolute;
+    color: #e3e3e3;
+    font-family: sans-serif;
+    font-size: 6rem;
+    left: 50px;
+    top: 150px;
+    word-break: break-all;
+    backdrop-filter: blur(2px);
+    padding: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+.container_banner_principal {
+    width: 100vw;
+    height: 500px;
+    position: relative;
+}
+
+.container_banner_principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titulo_recentes {
+    background-color: #ea2102;
+    color: #fff;
+    border-radius: 7px;
+    margin: 50px 0;
+    padding: 5px;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.container_recentes {
+    width: 90vw;
+    margin-bottom: 50px;
+    padding: 20px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    overflow-x: scroll;
+}
+
+.container_recentes::-webkit-scrollbar {
+    background-color: transparent;
+    height: 10px;
+    border-radius: 50px;
+    width: 10px;
+}
+
+.container_recentes::-webkit-scrollbar-thumb {
+    background-color: #2e2e2e;
+    border-radius: 10px;
+}
+
+/* Apks */
+.apk {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.apk img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.346);
+}
+
+.apk .nome_apk {
+    font-family: sans-serif;
+    font-size: 1rem;
+
+}
+
+/* Posts */
+.container_recentes .post {
+    min-width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.346);
+    background-color: #ffffff;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container_recentes .post img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+
+}
+
+.container_recentes .post .titulo_post {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.8rem;
+}

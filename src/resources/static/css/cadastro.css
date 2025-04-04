@@ -1,0 +1,57 @@
+/* Style do bloco de mensagem */
+.container_mensagem {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    display: none;
+}
+
+.container_mensagem p {
+    width: 40%;
+    border-radius: 7px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.588), rgba(0, 0, 0, 0.583)), url("../img/site/login.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#color_1 {
+    background-color: rgba(255, 0, 0, 0.629);
+    color: #fff;
+}
+
+#color_2 {
+    background-color: rgba(0, 255, 89, 0.938);
+}
+
+#color_3 {
+    background-color: rgb(255, 208, 0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.875rem;
+    }
+
+    .auth-buttons a {
+        font-size: 0.875rem;
+    }
+
+    .container_mensagem p {
+        width: 80%;
+    }
+}

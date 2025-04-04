@@ -1,0 +1,41 @@
+.container_certificadcos {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 2%;
+}
+
+.container_certificadcos a {
+    text-decoration: none;
+}
+
+.certificado {
+    height: 400px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgb(58, 58, 58);
+    background-color: rgb(45, 45, 45);
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+}
+
+.certificado img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.certificado h2 {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}

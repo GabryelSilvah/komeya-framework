@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.786), rgba(0, 0, 0, 0.739)), url("http://localhost:8007/Api_funcionarios/src/core/templates/fundo_Komeya.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container_mensagem_erro {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    word-break: break-all;
+    background-color: rgb(227, 174, 0);
+    padding: 2%;
+    border-radius: 7px;
+
+}
+
+#titulo_erro {
+    font-size: 1.2rem;
+}
+
+#linha {
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+#arquivo {
+    font-weight: 600;
+}
+
+#mensagem {
+    color: #dd0000;
+    font-weight: 600;
+}
