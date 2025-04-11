@@ -1,6 +1,6 @@
 # Komeya
 
-## Abount
+## About
 <p>
   Framework de autoria própria para PHP. Mais importante que saber utilizar um framework é saber como é construído o mesmo. Melhor forma de tirar essa barreira abstrata é desenvolver seu próprio sistema framework. O komeya, inicialmente é sistema que seu principal recurso é o mapeamento de route url. Tendo por objetivo desenvolver mais módulos para gerenciamento de controller, model, security, services, crud SQL e configurações.
 
