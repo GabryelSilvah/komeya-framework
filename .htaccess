@@ -1,7 +1,7 @@
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ boot_system/StartApp.php?url=$1 [NC,L,QSA]
+RewriteRule ^(.*)$ Z_Moldes/server/startFramework.php?url=$1 [NC,L,QSA]
 
 Options -Indexes
-DirectoryIndex boot_system/startApp.php
+DirectoryIndex Z_Moldes/server/startFramework.php

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/core/templates/exception.css">
+    <link rel="stylesheet" href="./Z_Moldes/core/templates/exception.css">
     <title>Debug</title>
 </head>
 

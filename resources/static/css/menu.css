@@ -1,0 +1,45 @@
+@font-face {
+    font-family: sintony;
+    src: url("../fonts/Sintony-Bold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sintony, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.menu {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul {
+    width: 90vw;
+    border-radius: 25px;
+    height: 60px;
+    background: linear-gradient(122deg, rgb(204, 101, 67) 0.72%, rgb(206, 103, 67) 28.64%, rgb(138, 58, 52) 71.26%);
+    box-shadow: 2px 2px 20px rgb(223, 101, 0);
+    border: 1.5px solid rgb(255, 255, 255);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu ul a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
