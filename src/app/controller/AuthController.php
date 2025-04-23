@@ -7,6 +7,7 @@ use Komeya\app\services\AuthService;
 use Komeya\core\architecture\Controller;
 use function Komeya\core\resources\view;
 use function Komeya\core\resources\getInput;
+use function Komeya\core\resources\redirect;
 
 #[Controller]
 class AuthController
@@ -28,17 +29,18 @@ class AuthController
     {
 
         $usuario = new UsuarioModel(95, "Gabriel", "123", "ADMIN");
-     
+
         if ($this->authService->auntenticarUser($usuario)) {
-            view("painel");
+            redirect("painel");
         } else {
-            view("telalogin");
+            redirect("login");
         }
     }
 
 
-    public function logout(){
+    public function logout()
+    {
         $this->authService->sair();
-        view("telaLogin");
+        redirect("login");
     }
 }

@@ -58,6 +58,13 @@ function view(string $view, array $data = [])
     require_once($pathTemplate);
 }
 
+function redirect(string $route, array $data = [])
+{
+    $pathTemplate = URL_padrao . $route;
+
+    header("Location: {$pathTemplate}");
+}
+
 /*Enviar dados no formato json*/
 function response_json(string | object $data_response, int $status_code = 200)
 {
