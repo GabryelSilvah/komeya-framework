@@ -1,6 +1,5 @@
 <?php
 
-
 //Configurações de constantes da base de dados
 define("HOST_DB", "localhost");
 define("PORT_DB", 3306);

@@ -6,7 +6,7 @@ use Exception;
 use Komeya\core\exceptions\Web_requestException;
 use ReflectionClass;
 
-
+use function Komeya\core\resources\redirect;
 
 class Web_request
 {
@@ -19,9 +19,10 @@ class Web_request
 	private static $positionRoute;
 	private static $authorized = true;
 	private static $arrayRoutePermision;
+	private static $sessionAuthentication = "";
 
 
-	public function __construct($arrayRoutePermision, $positionRoute)
+	public function __construct($arrayRoutePermision = null, $positionRoute = null)
 	{
 
 		self::$arrayRoutePermision = $arrayRoutePermision;
@@ -176,14 +177,16 @@ class Web_request
 	//Marcar todas as rotas como acesso somente autenticado, as que não são do tipo pirmitAll()
 	public static function anyAuthorized()
 	{
+
+
 		self::$authorized = false;
-		if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"])) {
+		if (isset($_SESSION[self::$sessionAuthentication]) && !empty($_SESSION[self::$sessionAuthentication])) {
 			self::$authorized = true;
 		}
 	}
 
 	/*Nível de acesso*/
-	public function role() {}
+	public static function role() {}
 
 	//Marca rota como formulário de login/autenticação
 	public function formLogin()
@@ -218,18 +221,31 @@ class Web_request
 		}
 
 		/*Validando permissão concedida para a rota, (permitAll, anyAuthorized)*/
+		
 		if ($dataRoute[$positionArray][3] == "authorized" && self::$authorized == false) {
 			$positionArray = self::findUrlInArray($dataRoute, self::$FORM_LOGIN);
 		}
 
 		/*Validando se usuário está logado, caso sim, bloquear acesso a página de login*/
-		if (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"]) && "/" . $url[2] == self::$FORM_LOGIN) {
-			die;
+		if (isset($_SESSION[self::$sessionAuthentication]) && !empty($_SESSION[self::$sessionAuthentication]) && "/" . $url[2] == self::$FORM_LOGIN) {
+			//header("Refresh: 0");
 		}
 
 		/*Caso nenhuma rota tem sido configurada um exception será disparada*/
 		if (empty($dataRoute[$positionArray])) {
 			throw new Web_requestException("Rota (/{$url[2]}) não existe no arquivo de EndPoint para o verbo HTTP usado.");
 		}
+	}
+
+	/*Pegar identificador session onde está guardado usuário logado*/
+	public static function session_security(string $keySessionAuthentication)
+	{
+		self::$sessionAuthentication = $keySessionAuthentication;
+		return new self;
+	}
+
+	public static function securityFilter()
+	{
+		return new self;
 	}
 }

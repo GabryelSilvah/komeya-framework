@@ -2,7 +2,10 @@
 
 namespace Komeya\app;
 
-use Komeya\app\annotetions\StartApplication;
+use Komeya\core\annotetions\StartApplication;
 
 #[StartApplication]
-class StartApp {}
+class StartApp
+{
+    public function main(String $args): void {}
+}

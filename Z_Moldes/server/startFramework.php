@@ -16,5 +16,6 @@ $reflection = new ReflectionClass(StartApp::class);
 
 
 $router = new EndPoint;
+$router->security();
 $router->route();
 Web_request::start_route();

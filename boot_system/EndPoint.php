@@ -15,11 +15,14 @@ class EndPoint
 		Web_request::post("/autenticar", "AuthController", "autenticar")->permitAll();
 		Web_request::get("/sair", "AuthController", "logout");
 
-		Web_request::get("/cadastrar", "UsuarioController", "cadastrar")->role();
+		Web_request::get("/cadastrar", "UsuarioController", "cadastrar");
 		Web_request::get("/painel", "PainelController", "exibir");
-		Web_request::get("/receitas", "ReceitaController", "exibir")->role();
-		Web_request::anyAuthorized();
+		Web_request::get("/receitas", "ReceitaController", "exibir");
 	}
 
-
+	public function security()
+	{
+		Web_request::session_security("usuario")
+			->anyAuthorized();
+	}
 }
